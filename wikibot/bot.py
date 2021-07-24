@@ -1,13 +1,14 @@
- """
- This is a echo bot.
- It echoes any incoming text messages.
- """
+"""
+This is a echo bot.
 
- import logging
+It echoes any incoming text messages.
+"""
 
- from aiogram import Bot, Dispatcher, executor, types
+import logging
 
-API_TOKEN = 'BOT TOKEN HERE'
+from aiogram import Bot, Dispatcher, executor, types
+
+API_TOKEN = '1903536975:AAFr5_Esrztcg9q94NZGRHenb23WPCjVgrQ'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -22,7 +23,7 @@ async def send_welcome(message: types.Message):
     """
     This handler will be called when user sends `/start` or `/help` command
   """
-    await message.reply("Hi!\nI'm EchoBot!\nPowered by aiogram.")
+    await message.reply("Hi!\nI'm Jasurbek's first Telegram bot!\nWelcome to Wiki-Info-Uz bot")
 
 
 
