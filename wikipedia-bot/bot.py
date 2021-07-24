@@ -4,11 +4,12 @@
  4"""
 
 import logging
+import wikipedia
 
 from aiogram import Bot, Dispatcher, executor, types
 
 API_TOKEN = '1915844247:AAE0goOwa6aB-6HDRO9IkYeX7UlvgNKHnKk'
-
+wikipedia.set_lang('en')
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
@@ -27,11 +28,13 @@ async def send_welcome(message: types.Message):
 
 
 @dp.message_handler()
-async def echo(message: types.Message):
-    # old style:
-    # await bot.send_message(message.chat.id, message.text)
+async def sendWiki(message: types.Message):
+    try:
+        respond=wikipedia.summary(message.text)
+        await message.answer(respond)
+    except:
+        await message.answer("There is no this maqola in this topic")
 
-    await message.answer(message.text)
 
 
 if __name__ == '__main__':
