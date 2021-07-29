@@ -8,7 +8,7 @@ import logging
 
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '1903536975:AAFr5_Esrztcg9q94NZGRHenb23WPCjVgrQ'
+API_TOKEN = '1907317088:AAFwA3OMsTK5GqZFG7oJXl6-YMwlUPDr5S8'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -23,7 +23,7 @@ async def send_welcome(message: types.Message):
     """
     This handler will be called when user sends `/start` or `/help` command
   """
-    await message.reply("Hi!\nI'm Jasurbek's first Telegram bot!\nWelcome to Wiki-Info-Uz bot")
+    await message.reply("Hi!\nThis bot is specially made for english dictionary\n\tWelcome to Dictionary Uz-Eng bot")
 
 
 
@@ -36,4 +36,4 @@ async def echo(message: types.Message):
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=Tr
+    executor.start_polling(dp, skip_updates=True)
