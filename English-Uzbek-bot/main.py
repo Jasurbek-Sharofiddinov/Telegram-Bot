@@ -1,4 +1,5 @@
 import logging
+import asyncio
 from aiogram import Bot, Dispatcher, executor, types
 from oxfordApi import getDefinitions
 from googletrans import Translator
